@@ -124,3 +124,60 @@ for cat, items in (grouped or {}).items():
     print(f"  {cat:<12}: {names}")
 
 print(f"\nOriginal products list unchanged: {len(products)} items")
+
+
+"""OUTPUT:
+============================================================
+Task 1 — In-stock products (filter)
+============================================================
+  Laptop
+  Python Book
+  Desk Lamp
+  AI Textbook
+  Monitor
+  Notebook
+
+============================================================
+Task 2 — Discounted prices (map, no mutation)
+============================================================
+  Laptop          original=$ 999.99  discounted=$899.991
+  Python Book     original=$  39.99  discounted=$ 35.991
+  Headphones      original=$ 149.99  discounted=$134.991
+  Desk Lamp       original=$  29.99  discounted=$ 26.991
+  AI Textbook     original=$  89.99  discounted=$ 80.991
+  Monitor         original=$ 349.99  discounted=$314.99100000000004
+  Notebook        original=$   4.99  discounted=$4.4910000000000005
+  Keyboard        original=$  79.99  discounted=$ 71.991
+
+============================================================
+Task 3 — Electronics under $200 (filter, two conditions)
+============================================================
+  Headphones      $149.99
+  Keyboard        $79.99
+
+============================================================
+Task 4 — All products sorted by price (sorted + key lambda)
+============================================================
+  $   4.99  Notebook
+  $  29.99  Desk Lamp
+  $  39.99  Python Book
+  $  79.99  Keyboard
+  $  89.99  AI Textbook
+  $ 149.99  Headphones
+  $ 349.99  Monitor
+  $ 999.99  Laptop
+
+============================================================
+Task 5 — Total in-stock value (sum + generator expression)
+============================================================
+  Total: $1514.94
+
+============================================================
+Task 6 — Products grouped by category (dict comprehension)
+============================================================
+  books       : Python Book, AI Textbook
+  electronics : Laptop, Headphones, Monitor, Keyboard
+  home        : Desk Lamp
+  office      : Notebook
+
+Original products list unchanged: 8 items"""
